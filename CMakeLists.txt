@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.5)
 
 function(GET_VERSION VERSION_PART VERSION_NUM)
     set(VERSION_REGEX "^const int VERSION_${VERSION_PART} = (.+);$")
@@ -139,7 +139,7 @@ else()
 endif()
 
 # hiredis dependency
-find_package(hiredis QUIET)
+# find_package(hiredis QUIET)
 if(hiredis_FOUND)
     list(APPEND REDIS_PLUS_PLUS_HIREDIS_LIBS hiredis::hiredis)
 
