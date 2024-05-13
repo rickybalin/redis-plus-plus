@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.5)
 
 set(REDIS_PLUS_PLUS_VERSION "1.3.10")
 message(STATUS "redis-plus-plus version: ${REDIS_PLUS_PLUS_VERSION}")
@@ -128,7 +128,7 @@ else()
 endif()
 
 # hiredis dependency
-find_package(hiredis QUIET)
+#find_package(hiredis QUIET)
 if(hiredis_FOUND)
     list(APPEND REDIS_PLUS_PLUS_HIREDIS_LIBS hiredis::hiredis)
 
